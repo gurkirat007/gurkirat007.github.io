@@ -1,8 +1,6 @@
-.vscode
 node_modules
-.DS_Store
-package-lock.json
 logo/Favicon-plain.svg
+images/.DS_Store
 images/drawing.svg
 images/final.svg
 images/black-background-with-focus-spot-light/27230.eps

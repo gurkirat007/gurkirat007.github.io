@@ -1,5 +1,5 @@
 import { AppState } from "../slices/AppSlices";
-import { NavBarButtonTypes, RoutePaths } from "./enums";
+import { NavBarButtonTypes, NavBarLinkIndex, RoutePaths } from "./enums";
 import { NavBarLink } from "./interfaces";
 
 export const navBarLinks: NavBarLink[] = [
@@ -10,9 +10,6 @@ export const navBarLinks: NavBarLink[] = [
   ];
 
 export const initialAppState: AppState = {
-    currentTab: {
-        link: RoutePaths.Home,
-        label: NavBarButtonTypes.Home
-    }
+    currentTab: navBarLinks[NavBarLinkIndex.Home]
 }
 

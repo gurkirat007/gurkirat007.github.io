@@ -1,0 +1,39 @@
+.header {
+    width: 100%; /* Full width of the right section */
+    
+    top: 0;
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+
+
+.backgroundImageComponent{
+    width: 38%; /* Left 1/3rd of the screen */
+    height: 100%; /* Full height */
+    position: fixed; /* Fixed position */
+    left: 0;
+    top: 0;
+    background-color: #f0f0f0;
+}
+
+
+  .rightSection{
+    margin-left: 38%; /* Push content to the right of the left section */
+    flex-grow: 1; /* Take up the remaining horizontal space */
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.pageContainer{
+    display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.contentContainer{
+    margin-top: 25px; /* Offset for the fixed header */
+    height: calc(100vh - 25px); /* Full height minus header height */
+    overflow-y: auto; /* Allow vertical scrolling within the content */
+    padding: 10px; 
+    background-color: black;
+}

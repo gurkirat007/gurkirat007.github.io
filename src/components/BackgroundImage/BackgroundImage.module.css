@@ -1,0 +1,33 @@
+.myImage{
+    /* background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.828), rgb(12, 2, 10)); */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* z-index: 1; */
+}
+
+
+.myImageContainer{
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+    /* z-index: 0; */
+}
+
+.logo{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 25%;
+    height: 25%;
+}
+
+
+
+.socials{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+

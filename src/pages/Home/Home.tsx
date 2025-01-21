@@ -1,7 +1,4 @@
-// import React from "react";
-
 import { useDispatch } from "react-redux";
-import { Header } from "../../components/Header/Header";
 import { setCurrentTab } from "../../slices/AppSlices";
 import { navBarLinks } from "../../Typings/AppConstants";
 import { NavBarLinkIndex } from "../../Typings/enums";
@@ -14,8 +11,29 @@ export default function Home() {
   }, [dispatch]);
   return (
     <div>
-      <Header />
       Home
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
+      <h1>Home</h1>
+      <br />
     </div>
   );
 }

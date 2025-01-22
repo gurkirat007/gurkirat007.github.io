@@ -1,6 +1,6 @@
 .header {
     width: 100%; /* Full width of the right section */
-    
+    height:15vh;
     top: 0;
     z-index: 10; /* Ensure it appears above other elements */
   }
@@ -35,5 +35,14 @@
     height: calc(100vh - 25px); /* Full height minus header height */
     overflow-y: auto; /* Allow vertical scrolling within the content */
     padding: 10px; 
+    background-color: white;
+}
+
+.bottomBox{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 15%;
     background-color: black;
 }

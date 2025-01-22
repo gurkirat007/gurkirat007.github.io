@@ -1,0 +1,38 @@
+.fullScreenButton{
+    width: 10%;
+    height: 100%;
+    background-color: yellow;
+    text-align: center;
+}
+
+.contactInfoTiles{
+    width:20%;
+    height: 100%;
+    background-color: blue;
+    padding: 0px;
+    text-align: center;
+}
+
+.downloadCV{
+    width:30%;
+    height:100%;
+    background-color: orange;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.group{
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.bottomBox{
+    height: 100%;
+}
+
+.centerBox{
+    height: 100%;
+    width: 100%;
+}

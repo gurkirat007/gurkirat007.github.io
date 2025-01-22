@@ -7,16 +7,34 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
 import BasePage from "./components/BasePage/BasePage";
+import { RoutePaths } from "./Typings/enums";
+import Resume from "./pages/Resume/resume";
 
 export default function App() {
   return (
     <MantineProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<BasePage content={<Home />} />} />
-          <Route path="/about" element={<BasePage content={<About />} />} />
-          <Route path="/contact" element={<BasePage content={<Contact />} />} />
-          <Route path="/blog" element={<BasePage content={<Blog />} />} />
+          <Route
+            path={RoutePaths.Home}
+            element={<BasePage content={<Home />} />}
+          />
+          <Route
+            path={RoutePaths.About}
+            element={<BasePage content={<About />} />}
+          />
+          <Route
+            path={RoutePaths.Contact}
+            element={<BasePage content={<Contact />} />}
+          />
+          <Route
+            path={RoutePaths.Blog}
+            element={<BasePage content={<Blog />} />}
+          />
+          <Route
+            path={RoutePaths.Resume}
+            element={<BasePage content={<Resume />} />}
+          />
         </Routes>
       </BrowserRouter>
     </MantineProvider>

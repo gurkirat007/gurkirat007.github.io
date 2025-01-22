@@ -1,13 +1,14 @@
 .header {
-    height: 56px;
+    height: 100%;
+    background-color: #191919;
     /* margin-bottom: 120px; */
-    background-color: var(--mantine-color-body);
-    border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    /* background-color: var(--mantine-color-body); */
+    /* border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4)); */
 
   }
 
   .inner {
-    height: 56px;
+    height: 100%;
     display: flex;
     /* justify-content: space-between; */
     justify-content: center;
@@ -19,17 +20,22 @@
     padding: 8px 12px;
     border-radius: var(--mantine-radius-sm);
     text-decoration: none;
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+    /* color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0)); */
+    color: #888;
     font-size: var(--mantine-font-size-sm);
     font-weight: 500;
   
     @mixin hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+      text-decoration: underline;
+      text-decoration-color: #F68338;
+        /* background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6)); */
     }
   
     [data-mantine-color-scheme] &[data-active] {
-      background-color: var(--mantine-color-blue-filled);
-      color: var(--mantine-color-white);
+      /* background-color: var(--mantine-color-blue-filled); */
+      /* color: var(--mantine-color-white); */
+      color: #F68338;
+      text-decoration: underline;
     }
   }
 

@@ -5,7 +5,7 @@ import {
   ActionIcon,
   Group,
 } from "@mantine/core";
-import classes from "./BackgroundImage.module.css";
+import classes from "./BackgroundImage.module.less";
 import { FaGithub, FaInstagram, FaLinkedin, FaDiscord } from "react-icons/fa";
 export default function BackgroundImageComponent() {
   return (

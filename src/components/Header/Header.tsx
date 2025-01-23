@@ -1,15 +1,22 @@
-import { Burger, Center, Container, Group } from "@mantine/core";
+import { Burger, Button, Container, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import classes from "./Header.module.css";
+import classes from "./Header.module.less";
 import { useNavigate } from "react-router-dom";
 import { navBarLinks } from "../../Typings/AppConstants";
-import { selectCurrentTab } from "../../slices/AppSlices";
+import {
+  selectCurrentTab,
+  selectShowNavBar,
+  setShowNavBar,
+} from "../../slices/AppSlices";
 import { useAppSelector } from "../../Hooks";
+import { useDispatch } from "react-redux";
 
 export function Header() {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const activeTab = useAppSelector(selectCurrentTab);
+  const showNavBar = useAppSelector(selectShowNavBar);
+
   const [opened, { toggle }] = useDisclosure(false);
 
   const items = navBarLinks.map((link) => (
@@ -35,6 +42,9 @@ export function Header() {
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Button onClick={() => dispatch(setShowNavBar(!showNavBar))}>
+          Click Me
+        </Button>
       </Container>
     </header>
   );

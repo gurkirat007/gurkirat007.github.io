@@ -6,6 +6,7 @@ import { RootState } from "../store";
 
 export interface AppState {
   currentTab: NavBarLink;
+  showNavBar: boolean;
 }
 
 export const appSlice = createSlice({
@@ -15,9 +16,12 @@ export const appSlice = createSlice({
     setCurrentTab(state, action: PayloadAction<NavBarLink>) {
       state.currentTab = action.payload;
     },
+    setShowNavBar(state, action: PayloadAction<boolean>) {
+      state.showNavBar = action.payload;
+    },
   },
 });
 export const selectCurrentTab = (state: RootState) => state.appState.currentTab;
-export const selectState = (state: RootState) => state;
-export const { setCurrentTab } = appSlice.actions;
+export const selectShowNavBar = (state: RootState) => state.appState.showNavBar;
+export const { setCurrentTab, setShowNavBar } = appSlice.actions;
 export default appSlice.reducer;

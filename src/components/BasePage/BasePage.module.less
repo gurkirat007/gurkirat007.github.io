@@ -1,48 +1,53 @@
+@import "../../Typings/CommonStyles.less";
+
 .header {
-    width: 100%; /* Full width of the right section */
-    height:15vh;
-    top: 0;
-    z-index: 10; /* Ensure it appears above other elements */
-  }
-
-
-.backgroundImageComponent{
-    width: 38%; /* Left 1/3rd of the screen */
-    height: 100%; /* Full height */
-    position: fixed; /* Fixed position */
-    left: 0;
-    top: 0;
-    background-color: #f0f0f0;
+  width: 100%; /* Full width of the right section */
+  height: @header-height;
+  top: 0;
+  z-index: 4; /* Ensure it appears above other elements */
+  position: absolute;
 }
 
+.backgroundImageComponent {
+  width: 38%; /* Left 1/3rd of the screen */
+  height: 100%; /* Full height */
+  position: fixed; /* Fixed position */
+  left: 0;
+  top: 0;
+  background-color: #f0f0f0;
+}
 
-  .rightSection{
-    margin-left: 38%; /* Push content to the right of the left section */
-    flex-grow: 1; /* Take up the remaining horizontal space */
-    display: flex;
-    flex-direction: column;
-  }
+.rightSection {
+  margin-left: 38%; /* Push content to the right of the left section */
+  flex-grow: 1; /* Take up the remaining horizontal space */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-
-.pageContainer{
-    display: flex;
+.pageContainer {
+  display: flex;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
 
-.contentContainer{
-    margin-top: 25px; /* Offset for the fixed header */
-    height: calc(100vh - 25px); /* Full height minus header height */
-    overflow-y: auto; /* Allow vertical scrolling within the content */
-    padding: 10px; 
-    background-color: white;
+.contentContainer {
+  height: calc(100vh - @bottom-box-height - @header-height); /* Full height minus header height */
+  overflow-y: auto; /* Allow vertical scrolling within the content */
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 4;
+  margin-top: 15vh;
 }
 
-.bottomBox{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 70%;
-    height: 15%;
-    background-color: black;
+.bottomBox {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: @bottom-box-height;
+  background-color: black;
+  z-index: 3;
 }

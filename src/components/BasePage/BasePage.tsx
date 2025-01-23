@@ -2,7 +2,7 @@ import { BasePageProps } from "../../Typings/interfaces";
 import BackgroundImageComponent from "../BackgroundImage/BackgroundImage";
 import BottomBox from "../BottomBox/BottomBox";
 import { Header } from "../Header/Header";
-import classes from "./BasePage.module.css";
+import classes from "./BasePage.module.less";
 
 export default function BasePage({ content }: BasePageProps) {
   return (

@@ -1,6 +1,6 @@
-import { Burger, Center, Container, Group } from "@mantine/core";
+import { Burger, Container, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import classes from "./Header.module.css";
+import classes from "./Header.module.less";
 import { useNavigate } from "react-router-dom";
 import { navBarLinks } from "../../Typings/AppConstants";
 import { selectCurrentTab } from "../../slices/AppSlices";

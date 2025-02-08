@@ -5,7 +5,7 @@ import { NavBarLink, ResumeSectionContent } from "./interfaces";
 export const navBarLinks: NavBarLink[] = [
   { link: RoutePaths.Home, label: NavBarButtonTypes.Home },
   { link: RoutePaths.Resume, label: NavBarButtonTypes.Resume },
-  { link: RoutePaths.Projects, label: NavBarButtonTypes.Projects },
+  { link: RoutePaths.Portfolio, label: NavBarButtonTypes.Portfolio },
   { link: RoutePaths.Blog, label: NavBarButtonTypes.Blog },
   { link: RoutePaths.Contact, label: NavBarButtonTypes.Contact },
 ];

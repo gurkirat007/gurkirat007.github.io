@@ -1,6 +1,7 @@
 import { Divider, Grid } from "@mantine/core";
 import classes from "./Home.module.less";
 import { myInfo } from "../../Typings/AppConstants";
+import { myDescription } from "../../content/home";
 
 function MyInfo() {
   return (
@@ -29,14 +30,7 @@ export default function IntroductionSection() {
         <h1 className={classes.contentHeading}>Gurkirat Singh</h1>
       </div>
       <div>
-        <p className={classes.contentParagraph}>
-          Hi, My name is Rory McCan. I am a Web Designer, and etiam accumsan
-          scelerisque rhoncus. Nulla quis laorey velit drana. Pelteqle quisu
-          velleopha retra congue. Nulla quis laoreet velit. Pelteqle quisu
-          velleopha retra congue. Lorem ipsum nolan sithe cons eturadip liscing
-          elit. Donec hendrerit sapien coner the consequat erose viverra at.
-          Quality quis laorey velit. Pelteqle quisu velleopha retra the congue.
-        </p>
+        <p className={classes.contentParagraph}>{myDescription}</p>
         <MyInfo />
       </div>
       <Divider />

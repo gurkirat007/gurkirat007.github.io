@@ -1,0 +1,2 @@
+export const myDescription =
+  `Hi, I am Gurkirat Singh - a software development engineer currently working in Mastercard, having passion for technology and finance. <br>I am also an amateur Roboticist.Whether building high-performance financial applications, optimizing trading systems, or exploring new technologies, I enjoy solving complex problems that drive innovation. <br>Welcome to my personal space on the web—feel free to explore my work, projects, and my blogs!`;

@@ -8,7 +8,7 @@ import Blog from "./pages/Blog/Blog";
 import BasePage from "./components/BasePage/BasePage";
 import { RoutePaths } from "./Typings/enums";
 import Resume from "./pages/Resume/resume";
-import Projects from "./pages/Projects/Projects";
+import Portfolio from "./pages/Portfolio/Portfolio";
 
 export default function App() {
   return (
@@ -20,8 +20,8 @@ export default function App() {
             element={<BasePage content={<Home />} />}
           />
           <Route
-            path={RoutePaths.Projects}
-            element={<BasePage content={<Projects />} />}
+            path={RoutePaths.Portfolio}
+            element={<BasePage content={<Portfolio />} />}
           />
           <Route
             path={RoutePaths.Contact}

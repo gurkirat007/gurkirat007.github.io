@@ -9,5 +9,5 @@ export default function Blog() {
   useEffect(() => {
     dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.Blog]));
   }, [dispatch]);
-  return <div>Blog</div>;
+  return <div>Blogs coming soon</div>;
 }

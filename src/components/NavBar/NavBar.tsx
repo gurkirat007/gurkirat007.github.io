@@ -1,9 +1,9 @@
+import { useAppSelector } from "../../Hooks";
+import { selectShowNavBar } from "../../slices/AppSlices";
 import classes from "./NavBar.module.less";
+import NavBarContainer from "./NavBarContainer";
 
 export default function NavBar() {
-  return (
-    <div className={classes.navBarContainer}>
-      hello this is navbar<p>hello</p>
-    </div>
-  );
+  const showNavBar = useAppSelector(selectShowNavBar);
+  return <div>{showNavBar ? <NavBarContainer /> : <NavBar />}</div>;
 }

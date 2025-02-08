@@ -4,11 +4,11 @@ import { NavBarLinkIndex } from "../../Typings/enums";
 import { setCurrentTab } from "../../slices/AppSlices";
 import { useEffect } from "react";
 
-export default function About() {
+export default function Projects() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.About]));
+    dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.Projects]));
   }, [dispatch]);
 
-  return <div>About</div>;
+  return <div>Projects</div>;
 }

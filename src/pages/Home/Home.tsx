@@ -3,6 +3,8 @@ import { setCurrentTab } from "../../slices/AppSlices";
 import { navBarLinks } from "../../Typings/AppConstants";
 import { NavBarLinkIndex } from "../../Typings/enums";
 import { useEffect } from "react";
+import IntroductionSection from "./IntroductionSection";
+import WhatIDoSection from "./WhatIDo";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -11,6 +13,8 @@ export default function Home() {
   }, [dispatch]);
   return (
     <div>
+      <IntroductionSection />
+      <WhatIDoSection />
       Home
       <h1>Home</h1>
       <br />

@@ -1,8 +1,14 @@
 import { useDispatch } from "react-redux";
-import { navBarLinks } from "../../Typings/AppConstants";
+import {
+  education,
+  navBarLinks,
+  publications,
+  resumeExperience,
+} from "../../Typings/AppConstants";
 import { NavBarLinkIndex } from "../../Typings/enums";
 import { setCurrentTab } from "../../slices/AppSlices";
 import { useEffect } from "react";
+import ResumeSection from "./ResumeSection";
 
 export default function Resume() {
   const dispatch = useDispatch();
@@ -10,5 +16,11 @@ export default function Resume() {
     dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.Resume]));
   }, [dispatch]);
 
-  return <div>Resume</div>;
+  return (
+    <div>
+      <ResumeSection contents={resumeExperience} heading="Experience" />
+      <ResumeSection contents={education} heading="Education" />
+      <ResumeSection contents={publications} heading="Publications" />
+    </div>
+  );
 }

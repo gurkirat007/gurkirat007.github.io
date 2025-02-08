@@ -1,6 +1,6 @@
 export enum NavBarButtonTypes {
     Home = 'HOME',
-    About = 'ABOUT',
+    Projects = 'PROJECTS',
     Blog = 'BLOG',
     Contact = 'CONTACT',
     Resume = 'RESUME'
@@ -8,7 +8,7 @@ export enum NavBarButtonTypes {
 
 export enum RoutePaths {
     Home = '/',
-    About = '/about',
+    Projects = '/projects',
     Blog = '/blog',
     Contact = '/contact',   
     Resume = '/resume'
@@ -17,7 +17,7 @@ export enum RoutePaths {
 export enum NavBarLinkIndex {
     Home= 0,
     Resume= 1,
-    About= 2,
+    Projects= 2,
     Blog= 3,
     Contact= 4,
 }

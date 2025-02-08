@@ -1,8 +1,17 @@
+@import '../../Typings/CommonStyles.less';
 .navBarContainer{
-    background-color: yellow;
-    width:30%;
+    background-color: @bottom-box-black-color;
+    width:@navbar-width;
     height: 100%;
     right: 0;
-    z-index: 100;
+    z-index: 20;
     position: absolute;
+    overflow:auto;
+    // display: flex;
+    // flex-direction: column;
+}
+
+
+.navBarBox{
+    text-align: center;
 }

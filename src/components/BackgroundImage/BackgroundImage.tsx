@@ -24,16 +24,36 @@ export default function BackgroundImageComponent() {
         >
           <img className={classes.logo} src="final.svg" />
           <Group className={classes.socials}>
-            <ActionIcon color="orange" radius="50%">
+            <ActionIcon
+              component="a"
+              color="orange"
+              radius="50%"
+              href="https://www.instagram.com/_gurkirat_singh007/"
+            >
               <FaInstagram color="black" />
             </ActionIcon>
-            <ActionIcon color="orange" radius="50%">
+            <ActionIcon
+              color="orange"
+              radius="50%"
+              component="a"
+              href="https://www.linkedin.com/in/gurkiratsingh007/"
+            >
               <FaLinkedin color="black" />
             </ActionIcon>
-            <ActionIcon color="orange" radius="50%">
+            <ActionIcon
+              color="orange"
+              radius="50%"
+              component="a"
+              href="https://github.com/gurkirat007"
+            >
               <FaGithub color="black" />
             </ActionIcon>
-            <ActionIcon color="orange" radius="50%">
+            <ActionIcon
+              color="orange"
+              radius="50%"
+              component="a"
+              href="https://discordapp.com/users/1318813826493452320"
+            >
               <FaDiscord color="black" />
             </ActionIcon>
 

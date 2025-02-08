@@ -10,6 +10,7 @@ import {
 } from "../../slices/AppSlices";
 import { useAppSelector } from "../../Hooks";
 import { useDispatch } from "react-redux";
+import NavBarButton from "../NavBar/NavBarButton";
 
 export function Header() {
   const navigate = useNavigate();
@@ -42,9 +43,9 @@ export function Header() {
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-        <Button onClick={() => dispatch(setShowNavBar(!showNavBar))}>
-          Click Me
-        </Button>
+        {/* <div className={classes.navBarButton}>
+          <NavBarButton />
+        </div> */}
       </Container>
     </header>
   );

@@ -3,12 +3,12 @@ import { MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
 import BasePage from "./components/BasePage/BasePage";
 import { RoutePaths } from "./Typings/enums";
 import Resume from "./pages/Resume/resume";
+import Projects from "./pages/Projects/Projects";
 
 export default function App() {
   return (
@@ -20,8 +20,8 @@ export default function App() {
             element={<BasePage content={<Home />} />}
           />
           <Route
-            path={RoutePaths.About}
-            element={<BasePage content={<About />} />}
+            path={RoutePaths.Projects}
+            element={<BasePage content={<Projects />} />}
           />
           <Route
             path={RoutePaths.Contact}

@@ -10,41 +10,112 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 export default function Contact() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.Contact]));
+    dispatch(
+      setCurrentTab(
+        navBarLinks[
+          NavBarLinkIndex.Contact
+        ],
+      ),
+    );
   }, [dispatch]);
   return (
     <>
       <div>
-        <h1 className={classes.contentHeading}>Contact me</h1>
+        <h1
+          className={
+            classes.contentHeading
+          }
+        >
+          Contact me
+        </h1>
       </div>
       <div>
-        <p className={classes.contentParagraph}>
-          If you have something to tell me please go ahead
+        <p
+          className={
+            classes.contentParagraph
+          }
+        >
+          If you have something to tell
+          me please go ahead
         </p>
       </div>
       <div>
         <p>
-          <span className={classes.contentParagraphHeading}>Phone: </span>
-          <span className={classes.contentParagraph}>+91 9988801802</span>
+          <span
+            className={
+              classes.contentParagraphHeading
+            }
+          >
+            Phone:{" "}
+          </span>
+          <span
+            className={
+              classes.contentParagraph
+            }
+          >
+            +91 9988801802
+          </span>
         </p>
         <p>
-          <span className={classes.contentParagraphHeading}>Email: </span>
-          <span className={classes.contentParagraph}>
+          <span
+            className={
+              classes.contentParagraphHeading
+            }
+          >
+            Email:{" "}
+          </span>
+          <span
+            className={
+              classes.contentParagraph
+            }
+          >
             gurkirat.singh.nitw@gmail.com
           </span>
         </p>
         <p>
-          <span className={classes.contentParagraphHeading}>Linkedin: </span>
-          <span className={classes.contentParagraph}>/gurkiratsingh007</span>
+          <span
+            className={
+              classes.contentParagraphHeading
+            }
+          >
+            Linkedin:{" "}
+          </span>
+          <span
+            className={
+              classes.contentParagraph
+            }
+          >
+            /gurkiratsingh007
+          </span>
         </p>
         <p>
-          <span className={classes.contentParagraphHeading}>Instagram: </span>
-          <span className={classes.contentParagraph}>_gurkirat_singh007</span>
+          <span
+            className={
+              classes.contentParagraphHeading
+            }
+          >
+            Instagram:{" "}
+          </span>
+          <span
+            className={
+              classes.contentParagraph
+            }
+          >
+            _gurkirat_singh007
+          </span>
         </p>
       </div>
-      <Divider className={classes.divider} />
+      <Divider
+        classNames={{
+          root: classes.divider,
+        }}
+      />
       <div>
-        <h3 className={classes.getInTouch}>Get in touch</h3>
+        <h3
+          className={classes.getInTouch}
+        >
+          Get in touch
+        </h3>
         <ContactForm />
       </div>
     </>

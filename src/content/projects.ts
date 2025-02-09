@@ -7,3 +7,4 @@ export const projects: {[key:string]: Project} = {
     "Berryminator3": {name: "b", description: "abc", skills: "cde", category: "abc", image:"abc"},
     "Berryminator4": {name: "b", description: "abc", skills: "cde", category: "abc", image:"abc"},  
 }
+

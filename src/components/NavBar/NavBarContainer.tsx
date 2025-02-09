@@ -1,16 +1,36 @@
-import { Box, Center, Image, ScrollArea } from "@mantine/core";
+import {
+  Box,
+  Center,
+  Image,
+  ScrollArea,
+} from "@mantine/core";
 import classes from "./NavBar.module.less";
 import NavBarButton from "./NavBarButton";
 export default function NavBarContainer() {
   return (
-    <div className={classes.navBarContainer}>
+    <div
+      className={
+        classes.navBarContainer
+      }
+    >
       <Center>
-        <Box className={classes.navBarBox}>
-          {/* hello this is navbar<p>hello</p> */}
-          {/* <NavBarButton /> */}
-          {/* Home */}
-          <h3 className={classes.contentSubHeading}>Web Developer</h3>
-          <h1 className={classes.contentHeading}>Gurkirat Singh</h1>
+        <Box
+          className={classes.navBarBox}
+        >
+          <h3
+            className={
+              classes.contentSubHeading
+            }
+          >
+            Web Developer
+          </h3>
+          <h1
+            className={
+              classes.contentHeading
+            }
+          >
+            Gurkirat Singh
+          </h1>
           <Image
             radius="50%"
             src="/myImage/myImage.JPG"
@@ -18,9 +38,16 @@ export default function NavBarContainer() {
             width={"5"}
             fit="contain"
           />
-          <p className={classes.contentParagraph}>
-            Hi, My name is Rory McCan. I am a Web Designer, and etiam accumsan
-            scelerisque rhoncus. Nulla quis laoreet velit. Pelteqle quisu
+          <p
+            className={
+              classes.contentParagraph
+            }
+          >
+            Hi, My name is Rory McCan. I
+            am a Web Designer, and etiam
+            accumsan scelerisque
+            rhoncus. Nulla quis laoreet
+            velit. Pelteqle quisu
             velleopha retra congue.
           </p>
           <br />

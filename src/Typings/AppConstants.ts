@@ -40,9 +40,3 @@ export const myInfo = [
   {key: "Instagram", value: "_gurkirat_singh007"},
 ]
 
-export const whatIDo = [
-  {icon:"abc", text:"bcd"},
-  {icon:"abc", text:"bcd"},
-  {icon:"abc", text:"bcd"},
-  {icon:"abc", text:"bcd"},
-]

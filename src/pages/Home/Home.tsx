@@ -9,35 +9,18 @@ import WhatIDoSection from "./WhatIDo";
 export default function Home() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setCurrentTab(navBarLinks[NavBarLinkIndex.Home]));
+    dispatch(
+      setCurrentTab(
+        navBarLinks[
+          NavBarLinkIndex.Home
+        ],
+      ),
+    );
   }, [dispatch]);
   return (
     <div>
       <IntroductionSection />
       <WhatIDoSection />
-      Home
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
-      <h1>Home</h1>
-      <br />
     </div>
   );
 }

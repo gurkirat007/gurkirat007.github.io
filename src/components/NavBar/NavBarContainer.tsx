@@ -88,31 +88,15 @@ export default function NavBarContainer() {
               justifyContent: "center",
             }}
           >
-            <InstagramEmbed
-              url="https://www.instagram.com/p/DDBJMp-yIDc/"
-              width={328}
-            />
+            <iframe
+              src="https://widget.tagembed.com/2152412"
+              style={{
+                width: "70%",
+                height: "600px",
+                border: "none",
+              }}
+            ></iframe>
           </div>
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
-          <h1>Home</h1>
-          <br />
         </Box>
       </Center>
     </div>

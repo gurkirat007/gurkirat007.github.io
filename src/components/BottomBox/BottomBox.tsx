@@ -1,6 +1,6 @@
 import { Box, Button, Group } from "@mantine/core";
 import classes from "./BottomBox.module.less";
-
+import CVPDF from "../../pages/Resume/Gurkirat_latest_resume-3.pdf";
 export default function BottomBox() {
   return (
     <>
@@ -26,7 +26,13 @@ export default function BottomBox() {
             <p className={classes.infoTylesData}>+91 9988801802</p>
           </div>
         </Box>
-        <Button className={classes.downloadCV}>DOWNLOAD CV</Button>
+        <a
+          className={classes.downloadCV}
+          href={CVPDF}
+          download="Gurkirat-resume"
+        >
+          <Button className={classes.downloadCVButton}>DOWNLOAD CV</Button>
+        </a>
       </Group>
     </>
   );

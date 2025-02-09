@@ -1,11 +1,15 @@
 import {
   Box,
   Center,
+  Divider,
   Image,
   ScrollArea,
 } from "@mantine/core";
 import classes from "./NavBar.module.less";
 import NavBarButton from "./NavBarButton";
+import { myInfo } from "../../Typings/AppConstants";
+import { InstagramEmbed } from "react-social-media-embed";
+
 export default function NavBarContainer() {
   return (
     <div
@@ -31,13 +35,14 @@ export default function NavBarContainer() {
           >
             Gurkirat Singh
           </h1>
-          <Image
-            radius="50%"
-            src="/myImage/myImage.JPG"
-            height={"auto%"}
-            width={"5"}
-            fit="contain"
-          />
+          <Center>
+            <Image
+              src="/myImage/cropped_image.png"
+              w={150}
+              h={150}
+            />
+          </Center>
+
           <p
             className={
               classes.contentParagraph
@@ -51,6 +56,43 @@ export default function NavBarContainer() {
             velleopha retra congue.
           </p>
           <br />
+          <Divider
+            classNames={{
+              root: classes.divider,
+            }}
+          />
+          <h3
+            className={
+              classes.contentSubHeading
+            }
+          >
+            @
+            {
+              myInfo.find(
+                (myInfoCell) =>
+                  myInfoCell.key ===
+                  "Instagram",
+              )?.value
+            }
+          </h3>
+          <h1
+            className={
+              classes.contentHeading
+            }
+          >
+            INSTAGRAM
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <InstagramEmbed
+              url="https://www.instagram.com/p/DDBJMp-yIDc/"
+              width={328}
+            />
+          </div>
           <h1>Home</h1>
           <br />
           <h1>Home</h1>
@@ -73,9 +115,6 @@ export default function NavBarContainer() {
           <br />
         </Box>
       </Center>
-      {/* <Center> */}
-
-      {/* </Center> */}
     </div>
   );
 }

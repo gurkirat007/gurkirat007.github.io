@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux";
 import { setCurrentTab } from "../../slices/AppSlices";
-import { navBarLinks } from "../../Typings/AppConstants";
+import {
+  myInfo,
+  navBarLinks,
+} from "../../Typings/AppConstants";
 import { NavBarLinkIndex } from "../../Typings/enums";
 import { useEffect } from "react";
 import classes from "./Contact.module.less";
@@ -101,7 +104,13 @@ export default function Contact() {
               classes.contentParagraph
             }
           >
-            _gurkirat_singh007
+            {
+              myInfo.find(
+                (myInfoCell) =>
+                  myInfoCell.key ===
+                  "Instagram",
+              )?.value
+            }
           </span>
         </p>
       </div>

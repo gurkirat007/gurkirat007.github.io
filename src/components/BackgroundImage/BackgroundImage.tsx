@@ -6,11 +6,21 @@ import {
   Group,
 } from "@mantine/core";
 import classes from "./BackgroundImage.module.less";
-import { FaGithub, FaInstagram, FaLinkedin, FaDiscord } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaDiscord,
+} from "react-icons/fa";
+import { myInfo } from "../../Typings/AppConstants";
 export default function BackgroundImageComponent() {
   return (
     <div>
-      <Box className={classes.myImageContainer}>
+      <Box
+        className={
+          classes.myImageContainer
+        }
+      >
         {/* <img src="final.svg" /> */}
         <BackgroundImage
           className={classes.myImage}
@@ -22,13 +32,24 @@ export default function BackgroundImageComponent() {
           gradient="linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%)"
           opacity={0.85}
         >
-          <img className={classes.logo} src="final.svg" />
-          <Group className={classes.socials}>
+          <img
+            className={classes.logo}
+            src="final.svg"
+          />
+          <Group
+            className={classes.socials}
+          >
             <ActionIcon
               component="a"
               color="orange"
               radius="50%"
-              href="https://www.instagram.com/_gurkirat_singh007/"
+              href={`https://www.instagram.com/${
+                myInfo.find(
+                  (myInfoCell) =>
+                    myInfoCell.key ===
+                    "Instagram",
+                )?.value
+              }/`}
             >
               <FaInstagram color="black" />
             </ActionIcon>

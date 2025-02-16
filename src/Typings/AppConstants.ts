@@ -1,6 +1,6 @@
 import { AppState } from "../slices/AppSlices";
 import { NavBarButtonTypes, NavBarLinkIndex, RoutePaths } from "./enums";
-import { NavBarLink, ResumeSectionContent } from "./interfaces";
+import { MediumJson, NavBarLink, ResumeSectionContent } from "./interfaces";
 
 export const navBarLinks: NavBarLink[] = [
   { link: RoutePaths.Home, label: NavBarButtonTypes.Home },
@@ -12,7 +12,9 @@ export const navBarLinks: NavBarLink[] = [
 
 export const initialAppState: AppState = {
   currentTab: navBarLinks[NavBarLinkIndex.Home],
-  showNavBar: false
+  showNavBar: false,
+  mediumData: undefined,
+  isLoading: false
 };
 
 export const resumeExperience: ResumeSectionContent[] = [

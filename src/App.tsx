@@ -14,8 +14,13 @@ import { RoutePaths } from "./Typings/enums";
 import Resume from "./pages/Resume/resume";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Project from "./pages/Project/Project";
+import { useDispatch } from "react-redux";
+import { getMediumData } from "./slices/AppSlices";
+import BlogContent from "./pages/Blog/BlogContent";
 
 export default function App() {
+  const dispatch = useDispatch();
+  // dispatch(getMediumData());
   return (
     <MantineProvider theme={theme}>
       <BrowserRouter>
@@ -65,6 +70,16 @@ export default function App() {
             element={
               <BasePage
                 content={<Project />}
+              />
+            }
+          />
+          <Route
+            path={`${RoutePaths.Blog}/:key`}
+            element={
+              <BasePage
+                content={
+                  <BlogContent />
+                }
               />
             }
           />

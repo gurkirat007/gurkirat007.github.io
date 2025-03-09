@@ -5,6 +5,7 @@ import {
 import classes from "./Home.module.less";
 import { myInfo } from "../../Typings/AppConstants";
 import { myDescription } from "../../content/home";
+import RichText from "../../components/RichText/RichText";
 
 function MyInfo() {
   return (
@@ -53,13 +54,13 @@ export default function IntroductionSection() {
         </h1>
       </div>
       <div>
-        <p
+        <RichText
           className={
             classes.contentParagraph
           }
-        >
-          {myDescription}
-        </p>
+          htmlContent={myDescription}
+        />
+        <br />
         <MyInfo />
       </div>
       <Divider

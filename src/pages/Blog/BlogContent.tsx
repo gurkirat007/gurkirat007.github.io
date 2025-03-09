@@ -21,15 +21,24 @@ export default function BlogContent() {
   )?.items[Number(key)];
 
   return (
-    <div
-      className={classes.blogsContent}
-    >
-      <RichText
-        className="blog-description"
-        htmlContent={
-          mediumBlog?.description
+    <>
+      <h1
+        className={
+          classes.contentHeading
         }
-      />
-    </div>
+      >
+        {mediumBlog?.title}
+      </h1>
+      <div
+        className={classes.blogsContent}
+      >
+        <RichText
+          className="blog-description"
+          htmlContent={
+            mediumBlog?.description
+          }
+        />
+      </div>
+    </>
   );
 }

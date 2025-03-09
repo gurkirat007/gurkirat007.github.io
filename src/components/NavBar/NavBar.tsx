@@ -9,10 +9,8 @@ export default function NavBar() {
   );
   return (
     <div>
-      {showNavBar ? (
+      {showNavBar && (
         <NavBarContainer />
-      ) : (
-        <NavBar />
       )}
     </div>
   );

@@ -57,7 +57,10 @@ export default function ContactForm() {
         body: formData,
       },
     );
-    console.log(_res);
+
+    if (_res.status === 200) {
+      form.reset();
+    }
   };
 
   return (

@@ -68,7 +68,7 @@ export default function ResumeSection(
         </h1>
       </div>
       <Timeline
-        active={1}
+        active={props.contents.length}
         color={"rgba(166, 56, 56, 1)"}
         bulletSize={24}
       >

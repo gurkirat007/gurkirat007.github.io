@@ -8,7 +8,6 @@ import {
   NavBarLink,
   ResumeSectionContent,
 } from "./interfaces";
-import projects from '../content/projects'
 
 export const navBarLinks: NavBarLink[] =
   [

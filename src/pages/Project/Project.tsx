@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import projects from "../../content/projects";
 import classes from "./Project.module.less";
 import { Container } from "@mantine/core";
-import RichText from "../../components/RichText/RichText";
 import ReactMarkDown from 'react-markdown'
 
 export default function Project() {

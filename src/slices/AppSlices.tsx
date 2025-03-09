@@ -13,7 +13,6 @@ import {
 } from "../Typings/interfaces";
 import { initialAppState } from "../Typings/AppConstants";
 import { RootState } from "../store";
-import projects from "../content/projects";
 // import { RootState } from "@reduxjs/toolkit/query";
 
 export interface AppState {

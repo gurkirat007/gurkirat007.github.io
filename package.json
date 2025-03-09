@@ -2,7 +2,7 @@
   "name": "vite-min-template",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://gurkirat007.github.io/mewebsite",
+  "homepage": "https://gurkirat007.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",

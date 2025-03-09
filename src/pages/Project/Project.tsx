@@ -1,18 +1,15 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../../content/projects";
+import projects from "../../content/projects";
 import classes from "./Project.module.less";
-import { Image } from "@mantine/core";
-import RichText from "../../components/RichText/RichText";
+import { Container } from "@mantine/core";
+import ReactMarkDown from 'react-markdown'
 
 export default function Project() {
   const { key } = useParams();
-  const {
-    name,
-    description,
-    skills,
-    category,
-    image,
-  } = projects[key ?? ""];
+  const md = projects[Number(key)].default ?? undefined;
+  console.log(projects[Number(key)]);
+
+  if(md === undefined) return <></>;
 
   return (
     <div>
@@ -24,22 +21,11 @@ export default function Project() {
         >
           Project
         </h3>
-        <h1
-          className={
-            classes.contentHeading
-          }
-        >
-          {name}
-        </h1>
       </div>
-      <Image src={image} />
-      <RichText
-        className={
-          classes.contentParagraph
-        }
-        htmlContent={description}
-      />
-      <p>
+      
+      <Container classNames={{root: classes.content }}><ReactMarkDown children={md}/>
+      </Container>
+      {/* <p>
         <span
           className={
             classes.contentParagraphHeading
@@ -70,7 +56,7 @@ export default function Project() {
         >
           {category}
         </span>
-      </p>
+      </p> */}
     </div>
   );
 }

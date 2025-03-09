@@ -41,6 +41,7 @@ export const initialAppState: AppState =
     showNavBar: false,
     mediumData: undefined,
     isLoading: false,
+    projectsData: []
   };
 
 export const resumeExperience: ResumeSectionContent[] =

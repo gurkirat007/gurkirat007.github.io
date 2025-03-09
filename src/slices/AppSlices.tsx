@@ -20,6 +20,7 @@ export interface AppState {
   showNavBar: boolean;
   mediumData: MediumJson | undefined;
   isLoading: boolean;
+  projectsData: any[];
 }
 
 export const getMediumData =
@@ -71,8 +72,8 @@ export const appSlice = createSlice({
         (state: AppState) => {
           state.isLoading = true;
         },
-      );
-  },
+      );  
+    },
 });
 export const selectCurrentTab = (
   state: RootState,

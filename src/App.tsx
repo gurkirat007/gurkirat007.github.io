@@ -20,7 +20,7 @@ export default function App() {
   // dispatch(getMediumData());
   return (
     <MantineProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
           <Route
             path={RoutePaths.Home}

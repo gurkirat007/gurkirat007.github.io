@@ -8,6 +8,7 @@ import {
   NavBarLink,
   ResumeSectionContent,
 } from "./interfaces";
+import projects from '../content/projects'
 
 export const navBarLinks: NavBarLink[] =
   [
@@ -41,6 +42,7 @@ export const initialAppState: AppState =
     showNavBar: false,
     mediumData: undefined,
     isLoading: false,
+    projectsData: []
   };
 
 export const resumeExperience: ResumeSectionContent[] =

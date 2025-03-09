@@ -12,7 +12,7 @@ import Blog from "./pages/Blog/Blog";
 import BasePage from "./components/BasePage/BasePage";
 import { RoutePaths } from "./Typings/enums";
 import Resume from "./pages/Resume/resume";
-import Portfolio from "./pages/Portfolio/Portfolio";
+import Portfolio from "./pages/Portfoliov2/Portfolio";
 import Project from "./pages/Project/Project";
 import BlogContent from "./pages/Blog/BlogContent";
 

@@ -13,6 +13,7 @@ import {
 } from "../Typings/interfaces";
 import { initialAppState } from "../Typings/AppConstants";
 import { RootState } from "../store";
+import projects from "../content/projects";
 // import { RootState } from "@reduxjs/toolkit/query";
 
 export interface AppState {
@@ -20,6 +21,7 @@ export interface AppState {
   showNavBar: boolean;
   mediumData: MediumJson | undefined;
   isLoading: boolean;
+  projectsData: any[];
 }
 
 export const getMediumData =
@@ -71,8 +73,8 @@ export const appSlice = createSlice({
         (state: AppState) => {
           state.isLoading = true;
         },
-      );
-  },
+      );  
+    },
 });
 export const selectCurrentTab = (
   state: RootState,

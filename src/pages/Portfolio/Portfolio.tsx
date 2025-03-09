@@ -12,7 +12,7 @@ import {
   Box,
   Grid,
 } from "@mantine/core";
-import { projects } from "../../content/projects";
+import { projects } from "../../content/projects2";
 import { useNavigate } from "react-router-dom";
 import { useHover } from "@mantine/hooks";
 

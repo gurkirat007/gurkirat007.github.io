@@ -3,22 +3,22 @@ export const myDescription = `Hi, I am Gurkirat Singh - a software development e
 export const whatIDo = [
   {
     icon: "web-development.png",
-    text: "Fusce suscipit, ante a hendrerit thelery ullamcorper vivense comtersa risus nisl cursus nurus the viverra ante nulla.",
+    text: "Building responsive web apps with seamless UX, specializing in front-end, back-end, and scalability.",
     heading: "Web Development",
   },
   {
     icon: "ml.png",
-    text: "Fusce suscipit, ante a hendrerit thelery ullamcorper vivense comtersa risus nisl cursus nurus the viverra ante nulla.",
+    text: "Creating predictive models using supervised, unsupervised, and deep learning techniques to solve complex problems.",
     heading: "Machine Learning",
   },
   {
     icon: "ai.png",
-    text: "Fusce suscipit, ante a hendrerit thelery ullamcorper vivense comtersa risus nisl cursus nurus the viverra ante nulla.",
+    text: "Developing AI-powered applications with machine learning, computer vision, and NLP for real-world solutions.",
     heading: "Artificial Intelligence",
   },
   {
     icon: "robotics.png",
-    text: "Fusce suscipit, ante a hendrerit thelery ullamcorper vivense comtersa risus nisl cursus nurus the viverra ante nulla.",
+    text: "Designing autonomous robotic systems using ROS, motion planning, SLAM, and embedded systems for intelligent automation.",
     heading: "Robotics",
   },
 ];

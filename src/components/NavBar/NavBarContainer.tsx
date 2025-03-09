@@ -48,12 +48,16 @@ export default function NavBarContainer() {
               classes.contentParagraph
             }
           >
-            Hi, My name is Rory McCan. I
-            am a Web Designer, and etiam
-            accumsan scelerisque
-            rhoncus. Nulla quis laoreet
-            velit. Pelteqle quisu
-            velleopha retra congue.
+            Hi, I’m Gurkirat Singh, a
+            software engineer at
+            Mastercard with a passion
+            for technology, finance, and
+            robotics. I love building
+            high-performance
+            applications and solving
+            complex problems. Welcome to
+            my space—explore my work,
+            projects, and blogs!
           </p>
           <br />
           <Divider

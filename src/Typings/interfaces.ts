@@ -1,5 +1,8 @@
 import { ReactNode } from "react";
-import { NavBarButtonTypes, RoutePaths } from "./enums";
+import {
+  NavBarButtonTypes,
+  RoutePaths,
+} from "./enums";
 
 export interface NavBarLink {
   link: RoutePaths;
@@ -37,4 +40,31 @@ export interface Project {
   skills: string;
   category: string;
   image: string;
+}
+
+export interface MediumFeedInfo {
+  url: string;
+  title: string;
+  link: string;
+  author: string;
+  description: string;
+  image: string;
+}
+
+export interface MediumFeedItem {
+  title: string;
+  pubDate: string;
+  link:string;
+  guid:string;
+  author:string;
+  thumbnail:string;
+  description:string;
+  enclosure: {};
+  categories: string[]
+}
+
+export interface MediumJson {
+  status: string;
+  feed: MediumFeedInfo;
+  items: MediumFeedItem[];
 }

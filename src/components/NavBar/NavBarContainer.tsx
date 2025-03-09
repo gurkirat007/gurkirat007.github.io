@@ -3,12 +3,12 @@ import {
   Center,
   Divider,
   Image,
-  ScrollArea,
+  // ScrollArea,
 } from "@mantine/core";
 import classes from "./NavBar.module.less";
-import NavBarButton from "./NavBarButton";
+// import NavBarButton from "./NavBarButton";
 import { myInfo } from "../../Typings/AppConstants";
-import { InstagramEmbed } from "react-social-media-embed";
+// import { InstagramEmbed } from "react-social-media-embed";
 
 export default function NavBarContainer() {
   return (

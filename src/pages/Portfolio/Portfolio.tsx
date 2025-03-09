@@ -11,8 +11,6 @@ import {
   BackgroundImage,
   Box,
   Grid,
-  Image,
-  Overlay,
 } from "@mantine/core";
 import { projects } from "../../content/projects";
 import { useNavigate } from "react-router-dom";

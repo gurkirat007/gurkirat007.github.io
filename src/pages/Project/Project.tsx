@@ -8,7 +8,7 @@ export default function Project() {
     description,
     skills,
     category,
-  } = projects[key];
+  } = projects[key ?? ""];
 
   return (
     <div>

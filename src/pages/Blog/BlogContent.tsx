@@ -1,18 +1,21 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../../content/projects";
-import { useAppSelector } from "../../Hooks";
+// import { projects } from "../../content/projects";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../Hooks";
 import {
   getMediumData,
   selectMediumData,
 } from "../../slices/AppSlices";
 import RichText from "../../components/RichText/RichText";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import classes from "./Blogs.module.less";
 
 export default function BlogContent() {
   const { key } = useParams();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getMediumData());
   }, [dispatch]);

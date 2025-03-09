@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import {
   getMediumData,
   selectMediumData,
@@ -8,11 +8,15 @@ import { navBarLinks } from "../../Typings/AppConstants";
 import { NavBarLinkIndex } from "../../Typings/enums";
 import { useEffect } from "react";
 import classes from "./Blogs.module.less";
-import { useAppSelector } from "../../Hooks";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../Hooks";
 import ListBlogs from "./BlogTile";
 
 export default function Blog() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(

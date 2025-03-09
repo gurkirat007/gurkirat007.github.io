@@ -1,6 +1,6 @@
 import { AppState } from "../slices/AppSlices";
 import { NavBarButtonTypes, NavBarLinkIndex, RoutePaths } from "./enums";
-import { MediumJson, NavBarLink, ResumeSectionContent } from "./interfaces";
+import { NavBarLink, ResumeSectionContent } from "./interfaces";
 
 export const navBarLinks: NavBarLink[] = [
   { link: RoutePaths.Home, label: NavBarButtonTypes.Home },

@@ -68,7 +68,7 @@ export const appSlice = createSlice({
       )
       .addCase(
         getMediumData.pending,
-        (state: AppState, action) => {
+        (state: AppState) => {
           state.isLoading = true;
         },
       );

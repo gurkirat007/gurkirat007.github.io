@@ -1,16 +1,15 @@
-import {
-  useEffect,
-  useState,
-} from "react";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+// import { useDispatch } from "react-redux";
 import {
   getMediumData,
-  selectIsLoading,
+  // selectIsLoading,
   selectMediumData,
 } from "../../slices/AppSlices";
-import { useAppSelector } from "../../Hooks";
 import {
-  Badge,
+  useAppDispatch,
+  useAppSelector,
+} from "../../Hooks";
+import {
   Button,
   Card,
   Group,
@@ -26,15 +25,15 @@ import {
 import classes from "./Blogs.module.less";
 
 export default function ListBlogs() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const mediumData = useAppSelector(
     selectMediumData,
   );
-  const isLoading = useAppSelector(
-    selectIsLoading,
-  );
+  // const isLoading = useAppSelector(
+  //   selectIsLoading,
+  // );
 
   useEffect(() => {
     void dispatch(getMediumData());

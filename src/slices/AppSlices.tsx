@@ -20,6 +20,7 @@ export interface AppState {
   showNavBar: boolean;
   mediumData: MediumJson | undefined;
   isLoading: boolean;
+  imgFullScreen: boolean;
 }
 
 export const getMediumData =
@@ -52,6 +53,13 @@ export const appSlice = createSlice({
       action: PayloadAction<boolean>,
     ) {
       state.showNavBar = action.payload;
+    },
+    setImgFullScreen(
+      state,
+      action: PayloadAction<boolean>,
+    ) {
+      state.imgFullScreen =
+        action.payload;
     },
   },
   extraReducers: (
@@ -86,9 +94,13 @@ export const selectMediumData = (
 export const selectIsLoading = (
   state: RootState,
 ) => state.appState.isLoading;
+export const selectIsImgFullScreen = (
+  state: RootState,
+) => state.appState.imgFullScreen;
 
 export const {
   setCurrentTab,
   setShowNavBar,
+  setImgFullScreen,
 } = appSlice.actions;
 export default appSlice.reducer;

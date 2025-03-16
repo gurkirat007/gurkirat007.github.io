@@ -12,6 +12,7 @@ import {
 export default function NavBarButton() {
   // const dispatch = useDispatch();
   const dispatch = useAppDispatch();
+
   const showNavBar = useAppSelector(
     selectShowNavBar,
   );

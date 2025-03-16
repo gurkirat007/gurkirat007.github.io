@@ -9,16 +9,24 @@ import { useNavigate } from "react-router-dom";
 import { navBarLinks } from "../../Typings/AppConstants";
 import {
   selectCurrentTab,
+  selectIsImgFullScreen,
+  setCurrentTab,
   // selectShowNavBar,
 } from "../../slices/AppSlices";
-import { useAppSelector } from "../../Hooks";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../Hooks";
 // import { useDispatch } from "react-redux";
 
 export function Header() {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const activeTab = useAppSelector(
     selectCurrentTab,
+  );
+  const isFulllScreen = useAppSelector(
+    selectIsImgFullScreen,
   );
   // const showNavBar = useAppSelector(selectShowNavBar);
 
@@ -26,7 +34,7 @@ export function Header() {
     useDisclosure(false);
 
   const items = navBarLinks.map(
-    (link) => (
+    (link, idx) => (
       <a
         key={link.label}
         href={link.link}
@@ -38,6 +46,11 @@ export function Header() {
         onClick={(event) => {
           event.preventDefault();
           navigate(link.link);
+          dispatch(
+            setCurrentTab(
+              navBarLinks[idx],
+            ),
+          );
         }}
       >
         {link.label}
@@ -46,7 +59,13 @@ export function Header() {
   );
 
   return (
-    <header className={classes.header}>
+    <header
+      className={`${classes.header} ${
+        isFulllScreen
+          ? classes.fullscreen
+          : ""
+      }`}
+    >
       <Container
         size="md"
         className={classes.inner}

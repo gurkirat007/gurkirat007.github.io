@@ -1,9 +1,8 @@
 import {
-  Burger,
   Container,
-  Group,
+  Flex,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useMediaQuery } from "@mantine/hooks";
 import classes from "./Header.module.less";
 import { useNavigate } from "react-router-dom";
 import { navBarLinks } from "../../Typings/AppConstants";
@@ -11,13 +10,12 @@ import {
   selectCurrentTab,
   selectIsImgFullScreen,
   setCurrentTab,
-  // selectShowNavBar,
 } from "../../slices/AppSlices";
 import {
   useAppDispatch,
   useAppSelector,
 } from "../../Hooks";
-// import { useDispatch } from "react-redux";
+import { theme } from "../../theme";
 
 export function Header() {
   const navigate = useNavigate();
@@ -28,10 +26,9 @@ export function Header() {
   const isFulllScreen = useAppSelector(
     selectIsImgFullScreen,
   );
-  // const showNavBar = useAppSelector(selectShowNavBar);
-
-  const [opened, { toggle }] =
-    useDisclosure(false);
+  const isLessThanLarge = useMediaQuery(
+    `(max-width: ${theme.breakpoints?.lg})`,
+  );
 
   const items = navBarLinks.map(
     (link, idx) => (
@@ -70,19 +67,22 @@ export function Header() {
         size="md"
         className={classes.inner}
       >
-        <Group gap={5} visibleFrom="xs">
+        <Flex
+          gap={5}
+          visibleFrom="xs"
+          align={
+            isLessThanLarge
+              ? "normal"
+              : "center"
+          }
+          direction={
+            isLessThanLarge
+              ? "column"
+              : "row"
+          }
+        >
           {items}
-        </Group>
-
-        <Burger
-          opened={opened}
-          onClick={toggle}
-          hiddenFrom="xs"
-          size="sm"
-        />
-        {/* <div className={classes.navBarButton}>
-          <NavBarButton />
-        </div> */}
+        </Flex>
       </Container>
     </header>
   );

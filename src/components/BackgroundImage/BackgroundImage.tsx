@@ -13,6 +13,7 @@ import {
   FaDiscord,
 } from "react-icons/fa";
 import { myInfo } from "../../Typings/AppConstants";
+import SocialIconsGroup from "../SocialsIconGroup/SocialsIconGroup";
 export default function BackgroundImageComponent() {
   return (
     <div>
@@ -36,50 +37,6 @@ export default function BackgroundImageComponent() {
             className={classes.logo}
             src="final.svg"
           />
-          <Group
-            className={classes.socials}
-          >
-            <ActionIcon
-              component="a"
-              color="orange"
-              radius="50%"
-              href={`https://www.instagram.com/${
-                myInfo.find(
-                  (myInfoCell) =>
-                    myInfoCell.key ===
-                    "Instagram",
-                )?.value
-              }/`}
-            >
-              <FaInstagram color="black" />
-            </ActionIcon>
-            <ActionIcon
-              color="orange"
-              radius="50%"
-              component="a"
-              href="https://www.linkedin.com/in/gurkiratsingh007/"
-            >
-              <FaLinkedin color="black" />
-            </ActionIcon>
-            <ActionIcon
-              color="orange"
-              radius="50%"
-              component="a"
-              href="https://github.com/gurkirat007"
-            >
-              <FaGithub color="black" />
-            </ActionIcon>
-            <ActionIcon
-              color="orange"
-              radius="50%"
-              component="a"
-              href="https://discordapp.com/users/1318813826493452320"
-            >
-              <FaDiscord color="black" />
-            </ActionIcon>
-
-            {/* <DiscordIcon /> */}
-          </Group>
         </Overlay>
       </Box>
     </div>

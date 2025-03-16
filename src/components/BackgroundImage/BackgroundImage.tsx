@@ -2,18 +2,9 @@ import {
   Box,
   BackgroundImage,
   Overlay,
-  ActionIcon,
-  Group,
 } from "@mantine/core";
 import classes from "./BackgroundImage.module.less";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaDiscord,
-} from "react-icons/fa";
-import { myInfo } from "../../Typings/AppConstants";
-import SocialIconsGroup from "../SocialsIconGroup/SocialsIconGroup";
+
 export default function BackgroundImageComponent() {
   return (
     <div>

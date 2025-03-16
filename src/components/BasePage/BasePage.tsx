@@ -4,6 +4,7 @@ import {
   useAppSelector,
 } from "../../Hooks";
 import {
+  selectIsImgFullScreen,
   selectShowNavBar,
   setShowNavBar,
 } from "../../slices/AppSlices";
@@ -22,6 +23,9 @@ export default function BasePage({
   const showNavBar = useAppSelector(
     selectShowNavBar,
   );
+  const isFullScreen = useAppSelector(
+    selectIsImgFullScreen,
+  );
   const dispatch = useAppDispatch();
   const [opened, { toggle }] =
     useDisclosure(false, {
@@ -35,9 +39,13 @@ export default function BasePage({
       className={classes.pageContainer}
     >
       <div
-        className={
+        className={`${
           classes.backgroundImageComponent
-        }
+        } ${
+          isFullScreen
+            ? classes.fullscreen
+            : ""
+        }`}
       >
         <BackgroundImageComponent />
       </div>
@@ -62,13 +70,15 @@ export default function BasePage({
           <Header />
         </div>
         {showNavBar && <NavBar />}
-        <div
-          className={
-            classes.contentContainer
-          }
-        >
-          {content}
-        </div>
+        {!isFullScreen && (
+          <div
+            className={
+              classes.contentContainer
+            }
+          >
+            {content}
+          </div>
+        )}
       </div>
       <div
         className={classes.bottomBox}

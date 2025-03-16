@@ -1,6 +1,7 @@
 // import { useDispatch } from "react-redux";
 import {
   getMediumData,
+  selectCurrentTab,
   selectMediumData,
   setCurrentTab,
 } from "../../slices/AppSlices";
@@ -29,7 +30,7 @@ export default function Blog() {
     dispatch(getMediumData());
   }, [
     dispatch,
-    // useAppSelector(selectMediumData),
+    useAppSelector(selectCurrentTab),
   ]);
 
   const mediumData = useAppSelector(

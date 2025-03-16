@@ -13,14 +13,9 @@ export default function ResumeSection(
     props.contents.map((content) => {
       return (
         <Timeline.Item
-          // color={"rgba(166, 56, 56, 1)"}
           classNames={{
-            itemBullet:
-              classes.itemBullet,
             itemTitle:
               classes.itemTitle,
-            itemBody:
-              classes.itemBullet,
           }}
           title={content.name}
         >
@@ -68,8 +63,13 @@ export default function ResumeSection(
         </h1>
       </div>
       <Timeline
+        classNames={{
+          itemBullet:
+            classes.itemBullet,
+          root: classes.root,
+        }}
         active={props.contents.length}
-        color={"rgba(166, 56, 56, 1)"}
+        // color={"rgba(166, 56, 56, 1)"}
         bulletSize={24}
       >
         {contentComponent}

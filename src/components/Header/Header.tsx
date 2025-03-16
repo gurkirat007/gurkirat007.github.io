@@ -69,7 +69,6 @@ export function Header() {
       >
         <Flex
           gap={5}
-          visibleFrom="xs"
           align={
             isLessThanLarge
               ? "normal"

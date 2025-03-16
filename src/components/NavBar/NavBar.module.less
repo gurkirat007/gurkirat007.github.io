@@ -1,19 +1,26 @@
 @import '../../Typings/CommonStyles.less';
 .navBarContainer{
-    background-color: @bottom-box-black-color;
+    background-color: @header-and-content-color;
     width:@navbar-width;
     height: 100%;
+    top: 0;
     right: 0;
     z-index: 20;
     position: absolute;
     overflow:auto;
+
+    @media (max-width: @mantine-breakpoint-md) {
+        width: 45vw;
+      }
+      @media (max-width: @mantine-breakpoint-sm) {
+        width: 100vw;
+      }
 }
 
 
 .navBarBox{
     text-align: center;
-    align-items: center;
-    justify-content: center;
+   
     margin-top: 20%;
     padding-left: 10%;
     padding-right: 10%;

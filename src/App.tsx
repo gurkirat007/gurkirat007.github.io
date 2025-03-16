@@ -17,7 +17,6 @@ import Project from "./pages/Project/Project";
 import BlogContent from "./pages/Blog/BlogContent";
 
 export default function App() {
-  // dispatch(getMediumData());
   return (
     <MantineProvider theme={theme}>
       <BrowserRouter basename="/">
